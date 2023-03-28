@@ -1,19 +1,19 @@
 let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 
-let smart_api = new SmartAPI({
-	api_key: 'm7TeW9kY',
-	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
-	access_token:
-		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
-	refresh_token:
-		'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2Nzk2Mzc2Nzd9.6VulqI2s_SwX0SJmftn9ATCneNyZFZHwTCDVDC-buPjlpJqNAEk3ZUEafgLT0zexEi-KJSfaeGV_mgib3tiydA',
-});
+// let smart_api = new SmartAPI({
+// 	api_key: 'm7TeW9kY',
+// 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
+// 	access_token:
+// 		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
+// 	refresh_token:
+// 		'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2Nzk2Mzc2Nzd9.6VulqI2s_SwX0SJmftn9ATCneNyZFZHwTCDVDC-buPjlpJqNAEk3ZUEafgLT0zexEi-KJSfaeGV_mgib3tiydA',
+// });
 
 // // If user does not have valid access token and refresh token then use generateSession method
 
 // }
 // smart_api
-// 	.generateSession('A1381358', '1258', '611433')
+// 	.generateSession('CLIENT_CODE', 'PASSWORD', 'TOTP')
 // 	.then((data) => {
 // 		console.log(data);
 // 	//        return smart_api.getProfile()
@@ -192,33 +192,33 @@ let smart_api = new SmartAPI({
 // }
 
 // ########################### Socket V2 Sample Code Ends Here ###########################
-// let web_socket = new WebSocketV2({
-// 	jwttoken:
-// 		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
-// 	apikey: 'm7TeW9kY',
-// 	clientcode: 'A1381358',
-// 	feedtype: '0838205854',
-// });
+let web_socket = new WebSocketV2({
+	jwttoken:
+		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
+	apikey: 'm7TeW9kY',
+	clientcode: 'A1381358',
+	feedtype: '0838205854',
+});
 
-// web_socket.connect().then((res) => {
-// 	let json_req = {
-// 		correlationID: 'abcde12345',
-// 		action: 1,
-// 		params: {
-// 			mode: 1,
-// 			tokenList: [
-// 				{
-// 					exchangeType: 2,
-// 					tokens: ['1232'],
-// 				},
-// 			],
-// 		},
-// 	};
+web_socket.connect().then((res) => {
+	let json_req = {
+		correlationID: 'abcde12345',
+		action: 1,
+		params: {
+			mode: 1,
+			tokenList: [
+				{
+					exchangeType: 2,
+					tokens: ['1232'],
+				},
+			],
+		},
+	};
 
-// 	web_socket.fetchData(json_req);
-// 	web_socket.on('tick', receiveTick);
+	web_socket.fetchData(json_req);
+	web_socket.on('tick', receiveTick);
 
-// 	function receiveTick(data) {
-// 		console.log('receiveTick:::::', data);
-// 	}
-// });
+	function receiveTick(data) {
+		console.log('receiveTick:::::', data);
+	}
+});
