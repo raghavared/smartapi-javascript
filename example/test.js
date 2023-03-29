@@ -207,7 +207,7 @@ let web_socket = new WebSocketV2({
 	jwttoken:
 		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY4MDAwNTc0OCwiZXhwIjoxNzY2NDA1NzQ4fQ.zpV2aRgJICOdoRjM5R1U2QoM71MSH_XufeY12cj42MceMaLGpQeWGFpYMHo3IZ47ysngxKK8VGlg_Q59eVnUDg',
 	apikey: 'm7TeW9kY',
-	clientcode: 'A1381358',
+	clientcode: 'Client_code',
 	feedtype: '0846508165',
 });
 
