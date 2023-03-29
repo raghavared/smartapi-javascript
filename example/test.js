@@ -1,7 +1,7 @@
 let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 
 let smart_api = new SmartAPI({
-	api_key: 'm7TeW9kY',
+	api_key: 'API_KEY',
 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
 	// access_token:
 	// 	'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
@@ -202,13 +202,12 @@ let smart_api = new SmartAPI({
 //     console.log("receiveTick:::::", data);
 // }
 
-// ########################### Socket V2 Sample Code Ends Here ###########################
+// ########################### Socket V2 Sample Code Start Here ###########################
 let web_socket = new WebSocketV2({
-	jwttoken:
-		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY4MDAwNTc0OCwiZXhwIjoxNzY2NDA1NzQ4fQ.zpV2aRgJICOdoRjM5R1U2QoM71MSH_XufeY12cj42MceMaLGpQeWGFpYMHo3IZ47ysngxKK8VGlg_Q59eVnUDg',
-	apikey: 'm7TeW9kY',
+	jwttoken: 'JWT_TOKEN',
+	apikey: 'API_KEY',
 	clientcode: 'Client_code',
-	feedtype: '0846508165',
+	feedtype: 'FEED_TYPE',
 });
 
 web_socket.connect().then((res) => {
@@ -233,3 +232,5 @@ web_socket.connect().then((res) => {
 		console.log('receiveTick:::::', data);
 	}
 });
+
+// ########################### Socket V2 Sample Code End Here ###########################
