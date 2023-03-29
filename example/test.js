@@ -1,15 +1,26 @@
 let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 
-// let smart_api = new SmartAPI({
-// 	api_key: 'm7TeW9kY',
-// 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
-// 	access_token:
-// 		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
-// 	refresh_token:
-// 		'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2Nzk2Mzc2Nzd9.6VulqI2s_SwX0SJmftn9ATCneNyZFZHwTCDVDC-buPjlpJqNAEk3ZUEafgLT0zexEi-KJSfaeGV_mgib3tiydA',
-// });
+let smart_api = new SmartAPI({
+	api_key: 'm7TeW9kY',
+	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
+	// access_token:
+	// 	'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
+	// refresh_token:
+	// 	'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2Nzk2Mzc2Nzd9.6VulqI2s_SwX0SJmftn9ATCneNyZFZHwTCDVDC-buPjlpJqNAEk3ZUEafgLT0zexEi-KJSfaeGV_mgib3tiydA',
+});
 
 // // If user does not have valid access token and refresh token then use generateSession method
+// smart_api
+// 	.cancelOrder({
+// 		variety: 'NORMAL',
+// 		orderid: '201130000006424',
+// 	})
+// 	.then((data) => {
+// 		console.log('res::::', data);
+// 	})
+// 	.catch((err) => {
+// 		console.log('err::::', err);
+// 	});
 
 // }
 // smart_api
@@ -194,10 +205,10 @@ let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 // ########################### Socket V2 Sample Code Ends Here ###########################
 let web_socket = new WebSocketV2({
 	jwttoken:
-		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
+		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY4MDAwNTc0OCwiZXhwIjoxNzY2NDA1NzQ4fQ.zpV2aRgJICOdoRjM5R1U2QoM71MSH_XufeY12cj42MceMaLGpQeWGFpYMHo3IZ47ysngxKK8VGlg_Q59eVnUDg',
 	apikey: 'm7TeW9kY',
 	clientcode: 'A1381358',
-	feedtype: '0838205854',
+	feedtype: '0846508165',
 });
 
 web_socket.connect().then((res) => {
@@ -205,10 +216,10 @@ web_socket.connect().then((res) => {
 		correlationID: 'abcde12345',
 		action: 1,
 		params: {
-			mode: 1,
+			mode: 4,
 			tokenList: [
 				{
-					exchangeType: 2,
+					exchangeType: 1,
 					tokens: ['1232'],
 				},
 			],
