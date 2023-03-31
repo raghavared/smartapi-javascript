@@ -20,7 +20,7 @@ let smart_api = new SmartAPI({
 
 // If user does not have valid access token and refresh token then use generateSession method
 smart_api
-	.generateSession('CLIENT_CODE', 'PASSWORD')
+	.generateSession('CLIENT_CODE', 'PASSWORD', 'TOTP')
 	.then((data) => {
 		return smart_api.getProfile();
 

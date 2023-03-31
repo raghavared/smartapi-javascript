@@ -3,24 +3,11 @@ let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 let smart_api = new SmartAPI({
 	api_key: 'API_KEY',
 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
-	// access_token:
-	// 	'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY3OTYzNzY3NywiZXhwIjoxNzY2MDM3Njc3fQ.INES_cGR-lbibUzvD7KcZm0e_LT-5DtP8A-Cdt1DIeLguL9NwDqGGODhYRmszehc2SH6ihArUwrINvfBORwwOg',
-	// refresh_token:
-	// 	'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2Nzk2Mzc2Nzd9.6VulqI2s_SwX0SJmftn9ATCneNyZFZHwTCDVDC-buPjlpJqNAEk3ZUEafgLT0zexEi-KJSfaeGV_mgib3tiydA',
+	// access_token: "YOUR_ACCESS_TOKEN",
+	// refresh_token: "YOUR_REFRESH_TOKEN"
 });
 
 // // If user does not have valid access token and refresh token then use generateSession method
-// smart_api
-// 	.cancelOrder({
-// 		variety: 'NORMAL',
-// 		orderid: '201130000006424',
-// 	})
-// 	.then((data) => {
-// 		console.log('res::::', data);
-// 	})
-// 	.catch((err) => {
-// 		console.log('err::::', err);
-// 	});
 
 // }
 // smart_api
