@@ -190,34 +190,34 @@ let smart_api = new SmartAPI({
 // }
 
 // ########################### Socket V2 Sample Code Start Here ###########################
-let web_socket = new WebSocketV2({
-	jwttoken: 'JWT_TOKEN',
-	apikey: 'API_KEY',
-	clientcode: 'Client_code',
-	feedtype: 'FEED_TYPE',
-});
+// let web_socket = new WebSocketV2({
+// 	jwttoken: 'JWT_TOKEN',
+// 	apikey: 'API_KEY',
+// 	clientcode: 'Client_code',
+// 	feedtype: 'FEED_TYPE',
+// });
 
-web_socket.connect().then((res) => {
-	let json_req = {
-		correlationID: 'abcde12345',
-		action: 1,
-		params: {
-			mode: 4,
-			tokenList: [
-				{
-					exchangeType: 1,
-					tokens: ['1232'],
-				},
-			],
-		},
-	};
+// web_socket.connect().then((res) => {
+// 	let json_req = {
+// 		correlationID: 'abcde12345',
+// 		action: 1,
+// 		params: {
+// 			mode: 4,
+// 			tokenList: [
+// 				{
+// 					exchangeType: 1,
+// 					tokens: ['1232'],
+// 				},
+// 			],
+// 		},
+// 	};
 
-	web_socket.fetchData(json_req);
-	web_socket.on('tick', receiveTick);
+// 	web_socket.fetchData(json_req);
+// 	web_socket.on('tick', receiveTick);
 
-	function receiveTick(data) {
-		console.log('receiveTick:::::', data);
-	}
-});
+// 	function receiveTick(data) {
+// 		console.log('receiveTick:::::', data);
+// 	}
+// });
 
 // ########################### Socket V2 Sample Code End Here ###########################
