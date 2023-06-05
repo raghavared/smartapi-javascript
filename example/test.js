@@ -1,7 +1,7 @@
 let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 
 let smart_api = new SmartAPI({
-	api_key: 'xRss03Vd',
+	// api_key: 'API_KEY',
 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
 	// access_token: "YOUR_ACCESS_TOKEN",
 	// refresh_token: "YOUR_REFRESH_TOKEN"
@@ -11,7 +11,7 @@ let smart_api = new SmartAPI({
 
 // }
 // smart_api
-// 	.generateSession('A1381358', '1258', '143911')
+// 	.generateSession('CLIENT_CODE', 'PASSWORD', 'TOTP')
 // 	.then((data) => {
 // 		console.log(data);
 // 		return smart_api.getProfile();
@@ -190,40 +190,32 @@ let smart_api = new SmartAPI({
 // }
 
 // ########################### Socket V2 Sample Code Start Here ###########################
-const web_socket = new WebSocketV2({
-	jwttoken:
-		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4Iiwicm9sZXMiOjAsInVzZXJ0eXBlIjoiVVNFUiIsImlhdCI6MTY4NDQ3MjM1MCwiZXhwIjoxNjg0NTU4NzUwfQ.DoOW6Ry5LQ8VJwESQpylmtk6qdqO96IWHPAyE7fPLFZimEgEut1pGvhInfcGBpx_iJAUD-sbk14vnKxGlLeUvw',
-	apikey: 'm7TeW9kY',
-	clientcode: 'A1381358',
-	feedtype:
-		'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IkExMzgxMzU4IiwiaWF0IjoxNjg0NDcyMzUwLCJleHAiOjE2ODQ1NTg3NTB9.fd7qqxg6Yfx_PqFcnmgm2ALkfs6Yi4kGVJvILwfPH6zZXcYLLY_184xVZ5PoGeaYEDP-qvcHJToaPwRw-0u8wQ',
+let web_socket = new WebSocketV2({
+	jwttoken: 'JWT_TOKEN',
+	apikey: 'API_KEY',
+	clientcode: 'Client_code',
+	feedtype: 'FEED_TYPE',
 });
 
 web_socket.connect().then(() => {
 	let json_req = {
 		correlationID: 'abcde12345',
 		action: 1,
-		mode: 1,
+		mode: 2,
 		exchangeType: 1,
-		tokens: ['2885'],
+		tokens: ['1594'],
 	};
 
 	web_socket.fetchData(json_req);
-
-	// let nfo_json_req = {
-	// 	correlationID: 'abcde12345',
-	// 	action: 0,
-	// 	mode: 1,
-	// 	exchangeType: 7,
-	// 	tokens: ['JEERAUNJHA19MAY2023'],
-	// };
-
-	// web_socket.fetchData(nfo_json_req);
 
 	web_socket.on('tick', receiveTick);
 
 	function receiveTick(data) {
 		console.log('receiveTick:::::', data);
 	}
+
+	// setTimeout(() => {
+	// 	web_socket.close();
+	// }, 10000);
 });
 // ########################### Socket V2 Sample Code End Here ###########################
