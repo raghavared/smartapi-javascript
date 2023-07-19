@@ -1,17 +1,17 @@
 let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 
 let smart_api = new SmartAPI({
-	api_key: 'smartapi_key', // PROVIDE YOUR API KEY HERE
+	api_key: '5VB3xxLM', // PROVIDE YOUR API KEY HERE
 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
-	// access_token: "YOUR_ACCESS_TOKEN",
-	// refresh_token: "YOUR_REFRESH_TOKEN"
+	access_token: 'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlI1MDg0MTQ4MiIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJpYXQiOjE2ODk2NjIyNzAsImV4cCI6MTY4OTc0ODY3MH0.pkDzNnwpFjRZfNbWoqHNAbyBY_19c72tSfQTBNp4lNksnoE9KEFXmJGno0aRr5M5eiOM9goMkVg6UV2yLB-WwA',
+	refresh_token: 'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2ODk2NjIyNzB9.EEoGGRhV2l4VzC6U6NcLGKC3tVjq9ZHYNN2i1B-Da4qXMwol72co3C79X-JPeDMT-6yxKekxtI3kVrPkOe507w'
 });
 
 // // If user does not have valid access token and refresh token then use generateSession method
 
 // }
 // smart_api
-// 	.generateSession('CLIENT_CODE', 'PASSWORD', 'TOTP')
+// 	.generateSession('R50841482', '7255', '259563')
 // 	.then((data) => {
 // 		console.log(data);
 // 		return smart_api.getProfile();
@@ -59,6 +59,10 @@ let smart_api = new SmartAPI({
 // 		// 	// });
 
 // 		// 	// return smart_api.getOrderBook();
+
+				// smart_api.getOrderBook().then((data)=>{
+				// 	console.log(data);
+				// })
 
 // 		// 	// return smart_api.getTradeBook();
 
@@ -119,6 +123,21 @@ let smart_api = new SmartAPI({
 // 		// 	//     "fromdate": "2021-02-10 09:00",
 // 		// 	//     "todate": "2021-02-10 09:20"
 // 		// 	// })
+
+
+		// Market Data Methods
+		smart_api.marketData({
+ 					"mode": "LTP",
+ 					"exchangeTokens": {
+ 						"NSE": [
+ 							"3045"
+ 						]
+ 					}
+				}).then((data) => {
+					console.log(JSON.stringify(data, null, 2));
+			        //  console.log(JSON.stringify(data))
+   				});
+
 // })
 // .then((data) => {
 // 	console.log('PROFILE::', data);
@@ -190,32 +209,32 @@ let smart_api = new SmartAPI({
 // }
 
 // ########################### Socket V2 Sample Code Start Here ###########################
-let web_socket = new WebSocketV2({
-	jwttoken: 'JWT_TOKEN',
-	apikey: 'API_KEY',
-	clientcode: 'Client_code',
-	feedtype: 'FEED_TYPE',
-});
+// let web_socket = new WebSocketV2({
+// 	jwttoken: 'JWT_TOKEN',
+// 	apikey: 'API_KEY',
+// 	clientcode: 'Client_code',
+// 	feedtype: 'FEED_TYPE',
+// });
 
-web_socket.connect().then(() => {
-	let json_req = {
-		correlationID: 'abcde12345',
-		action: 1,
-		mode: 2,
-		exchangeType: 1,
-		tokens: ['1594'],
-	};
+// web_socket.connect().then(() => {
+// 	let json_req = {
+// 		correlationID: 'abcde12345',
+// 		action: 1,
+// 		mode: 2,
+// 		exchangeType: 1,
+// 		tokens: ['1594'],
+// 	};
 
-	web_socket.fetchData(json_req);
+// 	web_socket.fetchData(json_req);
 
-	web_socket.on('tick', receiveTick);
+// 	web_socket.on('tick', receiveTick);
 
-	function receiveTick(data) {
-		console.log('receiveTick:::::', data);
-	}
+// 	function receiveTick(data) {
+// 		console.log('receiveTick:::::', data);
+// 	}
 
 	// setTimeout(() => {
 	// 	web_socket.close();
 	// }, 10000);
-});
+// });
 // ########################### Socket V2 Sample Code End Here ###########################

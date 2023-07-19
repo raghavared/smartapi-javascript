@@ -28,6 +28,8 @@ module.exports.API = {
 	rule_list: '/rest/secure/angelbroking/gtt/v1/ruleList',
 
 	candle_data: '/rest/secure/angelbroking/historical/v1/getCandleData',
+	market_data : '/rest/secure/angelbroking/market/v1/quote'
+
 	// "api.token": "/session/token",
 	// "api.token.invalidate": "/session/token",
 	// "api.token.renew": "/session/refresh_token",
