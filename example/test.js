@@ -140,15 +140,15 @@ let smart_api = new SmartAPI({
 
 		// search Scrip Methods
 		smart_api.searchScrip({
-					"exchange": "MC", 
-					"searchscrip":"CRUDE"
+					"exchange": "NCDEX", 
+					"searchscrip":"JEERAUNJHA18AUG23CE45300S"
 				})
 				.then((data) => {
 			        if(data.status===true && data.data.length > 0){
 						console.log(`Search successful. Found ${data.data.length} trading symbols for the given query:`)
 						console.log(data)
 					}
-					if(data.status===true && data.data.length == 0){
+					else if(data.status===true && data.data.length == 0){
 						console.log(`"Search successful. No matching trading symbols found for the given query."`)
 					}
 					else{
