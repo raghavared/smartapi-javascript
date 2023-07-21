@@ -1,17 +1,17 @@
 let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 
 let smart_api = new SmartAPI({
-	api_key: '5VB3xxLM', // PROVIDE YOUR API KEY HERE
+	api_key: 'smartapi_key', // PROVIDE YOUR API KEY HERE
 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
-	access_token: 'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlI1MDg0MTQ4MiIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJpYXQiOjE2ODk2NjIyNzAsImV4cCI6MTY4OTc0ODY3MH0.pkDzNnwpFjRZfNbWoqHNAbyBY_19c72tSfQTBNp4lNksnoE9KEFXmJGno0aRr5M5eiOM9goMkVg6UV2yLB-WwA',
-	refresh_token: 'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2ODk2NjIyNzB9.EEoGGRhV2l4VzC6U6NcLGKC3tVjq9ZHYNN2i1B-Da4qXMwol72co3C79X-JPeDMT-6yxKekxtI3kVrPkOe507w'
+	// access_token: "YOUR_ACCESS_TOKEN",
+	// refresh_token: "YOUR_REFRESH_TOKEN"
 });
 
 // // If user does not have valid access token and refresh token then use generateSession method
 
 // }
 // smart_api
-// 	.generateSession('R50841482', '7255', '259563')
+// 	.generateSession('CLIENT_CODE', 'PASSWORD', 'TOTP')
 // 	.then((data) => {
 // 		console.log(data);
 // 		return smart_api.getProfile();
@@ -126,17 +126,17 @@ let smart_api = new SmartAPI({
 
 
 		// Market Data Methods
-		smart_api.marketData({
- 					"mode": "LTP",
- 					"exchangeTokens": {
- 						"NSE": [
- 							"3045"
- 						]
- 					}
-				}).then((data) => {
-					console.log(JSON.stringify(data, null, 2));
-			        //  console.log(JSON.stringify(data))
-   				});
+		// smart_api.marketData({
+ 		// 			"mode": "FULL",
+ 		// 			"exchangeTokens": {
+ 		// 				"NSE": [
+ 		// 					"3045"
+ 		// 				]
+ 		// 			}
+		// 		}).then((data) => {
+		// 			console.log(JSON.stringify(data, null, 2));
+		// 	        //  console.log(JSON.stringify(data))
+   		// 		});
 
 // })
 // .then((data) => {
