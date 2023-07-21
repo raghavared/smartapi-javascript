@@ -1,10 +1,10 @@
 let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 
 let smart_api = new SmartAPI({
-	api_key: 'smartapi_key', // PROVIDE YOUR API KEY HERE
+	api_key: 'Qkgu7The', // PROVIDE YOUR API KEY HERE
 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
-	// access_token: "YOUR_ACCESS_TOKEN",
-	// refresh_token: "YOUR_REFRESH_TOKEN"
+	access_token: 'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlY1MTMyMDM0MiIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJpYXQiOjE2ODk5MTg2MTgsImV4cCI6MTY5MDAwNTAxOH0.0c-tRzuScccVQWLrSz9h-4_UYJiyAIxXLVI9hLqzClh3KTinuSoDjxqHXo6mRFaC0XB-HfsVImr6UtjD1p8DVg',
+	refresh_token: 'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2ODk5MTg2MTh9.ujK7cuolSsbbwqY-_mrLoaflPz63jd30cCxkSMDgCM6rzFFVVpmSzytZ9M2gCULNTUpY9TXG6ScpOWJlIpKFzw'
 });
 
 // // If user does not have valid access token and refresh token then use generateSession method
@@ -137,6 +137,24 @@ let smart_api = new SmartAPI({
 		// 			console.log(JSON.stringify(data, null, 2));
 		// 	        //  console.log(JSON.stringify(data))
    		// 		});
+
+		// search Scrip Methods
+		smart_api.searchScrip({
+					"exchange": "MC", 
+					"searchscrip":"CRUDE"
+				})
+				.then((data) => {
+			        if(data.status===true && data.data.length > 0){
+						console.log(`Search successful. Found ${data.data.length} trading symbols for the given query:`)
+						console.log(data)
+					}
+					if(data.status===true && data.data.length == 0){
+						console.log(`"Search successful. No matching trading symbols found for the given query."`)
+					}
+					else{
+						console.log(data)
+					}
+   				});
 
 // })
 // .then((data) => {
