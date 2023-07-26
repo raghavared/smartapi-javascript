@@ -1,10 +1,10 @@
 let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
 
 let smart_api = new SmartAPI({
-	api_key: 'Qkgu7The', // PROVIDE YOUR API KEY HERE
+	api_key: 'smartapi_key', // PROVIDE YOUR API KEY HERE
 	// OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor
-	access_token: 'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6IlY1MTMyMDM0MiIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJpYXQiOjE2OTAyNjIzNjksImV4cCI6MTY5MDM0ODc2OX0.ygVUyOF8KKHOe6EU1hinbp8smajrbQwMckW6Fn76xvHimQzA8Ie6x-tgB6vWZNZH7BGpxTvZ-m3r3rHE8mZtyw',
-    refresh_token: 'eyJhbGciOiJIUzUxMiJ9.eyJ0b2tlbiI6IlJFRlJFU0gtVE9LRU4iLCJpYXQiOjE2OTAyNjIzNjl9.1ggWi_wsi4JRw9TqVOTZ3a0OSLSOBesZ5ksfiQzhHBryDckzE52hn8vzKv-ZAZ9hwuLc9YwCUsM59sf6lLcKYg'
+	// access_token: "YOUR_ACCESS_TOKEN",
+	// refresh_token: "YOUR_REFRESH_TOKEN"
 });
 
 // // If user does not have valid access token and refresh token then use generateSession method
