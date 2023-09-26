@@ -60,6 +60,10 @@ let smart_api = new SmartAPI({
 
 // 		// 	// return smart_api.getOrderBook();
 
+				// smart_api.getOrderBook().then((data)=>{
+				// 	console.log(data);
+				// })
+
 // 		// 	// return smart_api.getTradeBook();
 
 // 		// 	// Portfolio Methods
@@ -119,6 +123,28 @@ let smart_api = new SmartAPI({
 // 		// 	//     "fromdate": "2021-02-10 09:00",
 // 		// 	//     "todate": "2021-02-10 09:20"
 // 		// 	// })
+
+
+		// Market Data Methods
+		// smart_api.marketData({
+ 		// 			"mode": "FULL",
+ 		// 			"exchangeTokens": {
+ 		// 				"NSE": [
+ 		// 					"3045"
+ 		// 				]
+ 		// 			}
+		// 		}).then((data) => {
+		// 			console.log(JSON.stringify(data, null, 2));
+		// 	        //  console.log(JSON.stringify(data))
+   		// 		});
+
+		// search Scrip Methods
+		smart_api.searchScrip({
+					"exchange": "BSE", 
+					"searchscrip":"Titan"
+				}).then((data)=>{
+					console.log(data);
+				})
 // })
 // .then((data) => {
 // 	console.log('PROFILE::', data);
@@ -190,32 +216,32 @@ let smart_api = new SmartAPI({
 // }
 
 // ########################### Socket V2 Sample Code Start Here ###########################
-let web_socket = new WebSocketV2({
-	jwttoken: 'JWT_TOKEN',
-	apikey: 'API_KEY',
-	clientcode: 'Client_code',
-	feedtype: 'FEED_TYPE',
-});
+// let web_socket = new WebSocketV2({
+// 	jwttoken: 'JWT_TOKEN',
+// 	apikey: 'API_KEY',
+// 	clientcode: 'Client_code',
+// 	feedtype: 'FEED_TYPE',
+// });
 
-web_socket.connect().then(() => {
-	let json_req = {
-		correlationID: 'abcde12345',
-		action: 1,
-		mode: 2,
-		exchangeType: 1,
-		tokens: ['1594'],
-	};
+// web_socket.connect().then(() => {
+// 	let json_req = {
+// 		correlationID: 'abcde12345',
+// 		action: 1,
+// 		mode: 2,
+// 		exchangeType: 1,
+// 		tokens: ['1594'],
+// 	};
 
-	web_socket.fetchData(json_req);
+// 	web_socket.fetchData(json_req);
 
-	web_socket.on('tick', receiveTick);
+// 	web_socket.on('tick', receiveTick);
 
-	function receiveTick(data) {
-		console.log('receiveTick:::::', data);
-	}
+// 	function receiveTick(data) {
+// 		console.log('receiveTick:::::', data);
+// 	}
 
 	// setTimeout(() => {
 	// 	web_socket.close();
 	// }, 10000);
-});
+// });
 // ########################### Socket V2 Sample Code End Here ###########################
