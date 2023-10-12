@@ -139,12 +139,12 @@ let smart_api = new SmartAPI({
    		// 		});
 
 		// search Scrip Methods
-		// smart_api.searchScrip({
-		// 			"exchange": "BSE", 
-		// 			"searchscrip":"Titan"
-		// 		}).then((data)=>{
-		// 			console.log(data);
-		// 		})
+		smart_api.searchScrip({
+					"exchange": "BSE", 
+					"searchscrip":"Titan"
+				}).then((data)=>{
+					console.log(data);
+				})
 // })
 // .then((data) => {
 // 	console.log('PROFILE::', data);
