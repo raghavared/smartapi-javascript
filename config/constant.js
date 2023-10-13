@@ -12,6 +12,7 @@ const MODE = {
 	LTP: 1,
 	Quote: 2,
 	SnapQuote: 3,
+	Depth: 4,
 };
 
 const EXCHANGES = {
