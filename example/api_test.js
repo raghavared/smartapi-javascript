@@ -145,6 +145,11 @@ let smart_api = new SmartAPI({
 				}).then((data)=>{
 					console.log(data);
 				})
+
+		// get all holding method
+		// smart_api.getAllHolding().then((data)=>{
+		// 	console.log(data);
+		// })
 // })
 // .then((data) => {
 // 	console.log('PROFILE::', data);
