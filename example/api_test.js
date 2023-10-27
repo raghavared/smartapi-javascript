@@ -155,6 +155,25 @@ let smart_api = new SmartAPI({
     // smart_api.indOrderDetails("GuiOrderID").then((data) => {
     //   console.log(data);
     // });
+
+	// // margin api Method
+	// smart_api
+    // .marginApi({
+    //   positions: [
+    //     {
+    //       exchange: "NFO",
+    //       qty: 1500,
+    //       price: 0,
+    //       productType: "CARRYFORWARD",
+    //       token: "154388",
+    //       tradeType: "SELL",
+    //     }
+    //   ],
+    // })
+    // .then((data) => {
+    //   console.log(data);
+    // });
+
 // })
 // .then((data) => {
 // 	console.log('PROFILE::', data);
