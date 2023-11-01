@@ -150,6 +150,11 @@ let smart_api = new SmartAPI({
 		// smart_api.getAllHolding().then((data)=>{
 		// 	console.log(data);
 		// })
+
+    // get individual order details
+    // smart_api.indOrderDetails("GuiOrderID").then((data) => {
+    //   console.log(data);
+    // });
 // })
 // .then((data) => {
 // 	console.log('PROFILE::', data);
