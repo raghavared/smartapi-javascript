@@ -252,6 +252,9 @@ let smart_api = new SmartAPI({
 // 	feedtype: 'FEED_TYPE',
 // });
 
+// //For handling custom error 
+// web_socket.customError();
+
 // web_socket.connect().then(() => {
 // 	let json_req = {
 // 		correlationID: 'abcde12345',
@@ -260,7 +263,6 @@ let smart_api = new SmartAPI({
 // 		exchangeType: 1,
 // 		tokens: ['1594'],
 // 	};
-
 // 	web_socket.fetchData(json_req);
 
 // 	web_socket.on('tick', receiveTick);
@@ -269,8 +271,10 @@ let smart_api = new SmartAPI({
 // 		console.log('receiveTick:::::', data);
 // 	}
 
-	// setTimeout(() => {
-	// 	web_socket.close();
-	// }, 10000);
+// 	setTimeout(() => {
+// 		web_socket.close();
+// 	}, 10000);
+// }).catch((err)=>{
+// 	console.log('Custom error :',err.message);
 // });
 // ########################### Socket V2 Sample Code End Here ###########################
