@@ -255,26 +255,31 @@ let smart_api = new SmartAPI({
 // //For handling custom error 
 // web_socket.customError();
 
+// // handle reconnection
+// web_socket.reconnection(reconnectType, delayTime, multiplier);
+
 // web_socket.connect().then(() => {
 // 	let json_req = {
-// 		correlationID: 'abcde12345',
+// 		correlationID: "abcde12345",
 // 		action: 1,
 // 		mode: 2,
 // 		exchangeType: 1,
-// 		tokens: ['1594'],
+// 		tokens: ["1594"],
 // 	};
+
 // 	web_socket.fetchData(json_req);
 
-// 	web_socket.on('tick', receiveTick);
+// 	web_socket.on("tick", receiveTick);
 
 // 	function receiveTick(data) {
-// 		console.log('receiveTick:::::', data);
+// 		console.log("receiveTick:::::", data);
 // 	}
 
-// 	setTimeout(() => {
-// 		web_socket.close();
-// 	}, 10000);
-// }).catch((err)=>{
-// 	console.log('Custom error :',err.message);
+// 	// setTimeout(() => {
+// 	// 	web_socket.close();
+// 	// }, 2000);
+	
+// }).catch((err) => {
+// 	console.log('Custom error :', err.message);
 // });
 // ########################### Socket V2 Sample Code End Here ###########################
