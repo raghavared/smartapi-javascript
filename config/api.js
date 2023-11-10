@@ -32,6 +32,7 @@ module.exports.API = {
 	search_scrip : '/rest/secure/angelbroking/order/v1/searchScrip',
   	get_all_holding : '/rest/secure/angelbroking/portfolio/v1/getAllHolding',
   	ind_order_details: '/rest/secure/angelbroking/order/v1/details',
+	margin_api : 'rest/secure/angelbroking/margin/v1/batch'
 	// "api.token": "/session/token",
 	// "api.token.invalidate": "/session/token",
 	// "api.token.renew": "/session/refresh_token",
