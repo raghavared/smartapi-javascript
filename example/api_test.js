@@ -286,10 +286,10 @@ let smart_api = new SmartAPI({
 
 // ########################### Socket Client updates Sample Code Start Here ###########################
 // let ws_clientupdate = new WSOrderUpdates({
-//   	jwttoken: 'JWT_TOKEN',
-// 	apikey: 'API_KEY',
-// 	clientcode: 'Client_code',
-// 	feedtype: 'FEED_TYPE',
+//   jwttoken: 'JWT_TOKEN',
+// 	 apikey: 'API_KEY',
+// 	 clientcode: 'Client_code',
+// 	 feedtype: 'FEED_TYPE',
 // });
 
 // ws_clientupdate.connect().then(() => {
