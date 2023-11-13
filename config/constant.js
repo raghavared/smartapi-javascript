@@ -1,5 +1,6 @@
 const CONSTANTS = {
 	websocketURL: 'wss://smartapisocket.angelone.in/smart-stream',
+	wsclientupdatesURL : 'wss://tns.angelone.in/smart-order-update',
 	Interval: 10000,
 };
 
