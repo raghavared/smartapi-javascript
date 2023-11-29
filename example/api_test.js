@@ -1,4 +1,4 @@
-let { SmartAPI, WebSocketClient, WebSocketV2 } = require('../lib');
+let { SmartAPI, WebSocketClient, WebSocketV2, WSOrderUpdates } = require('../lib');
 
 let smart_api = new SmartAPI({
 	api_key: 'smartapi_key', // PROVIDE YOUR API KEY HERE
@@ -283,3 +283,26 @@ let smart_api = new SmartAPI({
 // 	console.log('Custom error :', err.message);
 // });
 // ########################### Socket V2 Sample Code End Here ###########################
+
+// ########################### Socket Client updates Sample Code Start Here ###########################
+// let ws_clientupdate = new WSOrderUpdates({
+//   jwttoken: 'JWT_TOKEN',
+// 	 apikey: 'API_KEY',
+// 	 clientcode: 'Client_code',
+// 	 feedtype: 'FEED_TYPE',
+// });
+
+// ws_clientupdate.connect().then(() => {
+
+// 	ws_clientupdate.on("tick", receiveTick);
+
+// 	function receiveTick(data) {
+// 		console.log("receiveTick:::::", data);
+// 	}
+
+// 	// setTimeout(() => {
+// 	// 	ws_clientupdate.close();
+// 	// }, 10000);
+	
+// })
+// ########################### Socket Client updates Sample Code End Here ###########################
