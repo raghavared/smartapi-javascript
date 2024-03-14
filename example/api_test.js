@@ -174,6 +174,80 @@ let smart_api = new SmartAPI({
     //   console.log(data);
     // });
 
+	//brokerage calculator
+	// return smart_api.estimateCharges({
+	// 	"orders": [
+	// 		{
+	// 			"product_type": "DELIVERY",
+	// 			"transaction_type": "BUY",
+	// 			"quantity": "10",
+	// 			"price": "800",
+	// 			"exchange": "NSE",
+	// 			"symbol_name": "745AS33",
+	// 			"token": "17117"
+	// 		}, {
+	// 			"product_type": "DELIVERY",
+	// 			"transaction_type": "BUY",
+	// 			"quantity": "10",
+	// 			"price": "800",
+	// 			"exchange": "BSE",
+	// 			"symbol_name": "PIICL151223",
+	// 			"token": "726131"
+	// 		}
+	// 	]
+	// }).then(data=>{
+	// 	console.log(data)
+	// });
+
+	//verifydis
+	// return smart_api.verifyDis({
+	// 	"isin":"INE528G01035",
+	// 	"quantity":"1"
+	// }).then(data => {
+	// 	console.log(data)
+	// });
+
+	// return smart_api.generateTPIN({
+	// 	"dpId":"33200",
+	// 	"ReqId":"2351614738654050",
+	// 	"boid":"1203320018563571",
+	// 	"pan":"JZTPS2255C"
+	// }).then(data => {
+	// 	console.log(data)
+	// });
+	//getTransactionStatus
+	// return smart_api.getTranStatus({
+	// 	"ReqId":"2351614738654050"
+	// }).then(data => {
+	// 	console.log(data)
+	// });
+
+	// return smart_api.optionGreek({
+	// 	"name":"TCS", // Here Name represents the Underlying stock
+	// 	"expirydate":"25JAN2024"
+	// }).then(data => {
+	// 	console.log(data)
+	// });
+	
+	// return smart_api.gainersLosers({
+	// 	"datatype":"PercOIGainers", // Type of Data you want(PercOILosers/PercOIGainers/PercPriceGainers/PercPriceLosers)
+	// 	"expirytype":"NEAR" // Expiry Type (NEAR/NEXT/FAR)
+	// }).then(data => {
+	// 	console.log(data)
+	// });
+
+	// return smart_api.putCallRatio().then(data => {
+	// 	console.log(data)
+	// });
+	
+	// return smart_api.oIBuildup({
+	// 	"expirytype":"NEAR",
+	// 	"datatype":"Long Built Up"
+	// }).then(data => {
+	// 	console.log(data)
+	// });																																															
+
+
 // })
 // .then((data) => {
 // 	console.log('PROFILE::', data);
