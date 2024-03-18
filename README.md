@@ -237,3 +237,15 @@ web_socket.connect().then((res) => {
 
 // ########################### Socket V2 Sample Code End Here ###########################
 ```
+## Version 1.0.21
+- TLS Version Upgrade
+## IF Facing issue Https module not found error in smartApi, run the below command
+npm install https
+
+## Version 1.0.22
+- Added error logs using winston
+- It will create Error file if not created early , will capture error logs in the same file.
+
+## Version 1.0.23
+- Integrated EDIS anD Brokerage Calculator API
+- INtegrated Option Greeks,op Gainers/Losers, PCR and OI Buildup
