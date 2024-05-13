@@ -211,20 +211,14 @@ let web_socket = new WebSocketV2({
 	clientcode: 'Client_code',
 	feedtype: 'FEED_TYPE',
 });
-
+ // for mode, action and exchangeTypes , can use values from constants file.
 web_socket.connect().then((res) => {
 	let json_req = {
-		correlationID: 'abcde12345',
+		correlationID: 'correlation_id',
 		action: 1,
-		params: {
-			mode: 4,
-			tokenList: [
-				{
-					exchangeType: 1,
-					tokens: ['1232'],
-				},
-			],
-		},
+		mode : 1,
+		exchangeType: 1,
+		tokens: ["123"],
 	};
 
 	web_socket.fetchData(json_req);
