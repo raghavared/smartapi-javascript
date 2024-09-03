@@ -1,6 +1,6 @@
 module.exports.API = {
-	root: 'https://apiconnect.angelbroking.com',
-	login: 'https://smartapi.angelbroking.com/publisher-login',
+	root: 'https://apiconnect.angelone.in',
+	login: 'https://smartapi.angelone.in/publisher-login',
 	debug: false,
 	timeout: 7000,
 
