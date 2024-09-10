@@ -6,7 +6,7 @@ const config = {
     api_key: "user_api_key",
     client_code: "user01",
     jwttoken: "jwt-token",
-    default_login_uri :"https://smartapi.angelbroking.com/publisher-login",
+    default_login_uri :"https://smartapi.angelone.in/publisher-login",
     requestInstance: {
         request: sinon.stub(),
         interceptors: {
