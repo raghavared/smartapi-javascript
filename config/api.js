@@ -41,7 +41,7 @@ module.exports.API = {
 	optionGreek : 'rest/secure/angelbroking/marketData/v1/optionGreek',
 	gainersLosers : 'rest/secure/angelbroking/marketData/v1/gainersLosers',
 	putCallRatio : 'rest/secure/angelbroking/marketData/v1/putCallRatio',
-  nseIntraday : 'rest/secure/angelbroking/marketData/v1/bseIntraday',
+  nseIntraday : 'rest/secure/angelbroking/marketData/v1/nseIntraday',
   bseIntraday : 'rest/secure/angelbroking/marketData/v1/bseIntraday',
 	OIBuildup : 'rest/secure/angelbroking/marketData/v1/OIBuildup',
 	// "api.token": "/session/token",
